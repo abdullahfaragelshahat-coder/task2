@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقرير البحثي - تطبيقات الإنترنت والمنصات الإلكترونية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-body: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --accent-bg: #eff6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .main-wrapper {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Hero Header Structure */
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            color: #38bdf8;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 18px 24px;
+            border-radius: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+        }
+
+        .profile-item p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .profile-item span {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Content Sections */
+        section {
+            background: var(--surface);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #334155;
+            margin: 25px 0 15px 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        p strong {
+            color: var(--text-main);
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Modern Styled Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 25px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            background: var(--surface);
+        }
+
+        th {
+            background-color: var(--accent-bg);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 16px;
+            border-bottom: 2px solid var(--border);
+            font-size: 15px;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fafafa;
+        }
+
+        /* Image Box Container */
+        .image-frame {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 15px;
+            border-radius: 14px;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .image-frame img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-caption {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #64748b;
+            font-style: normal;
+        }
+
+        /* Unordered List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-right: 28px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            right: 8px;
+            color: var(--primary);
+            font-size: 22px;
+            line-height: 1;
+            top: 2px;
+        }
+
+        /* Anchor Links */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 640px) {
+            body {
+                padding: 15px 10px;
+            }
+            header, section {
+                padding: 20px;
+            }
+            .profile-card {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <!-- الترويسة والبيانات الأساسية (header) -->
+        <header>
+            <h1>عنوان التقرير البحثي: بناء وتطوير صفحات الويب الحديثة (HTML5)</h1>
+            <div class="profile-card">
+                <div class="profile-item">
+                    <p>اسم الطالب</p>
+                    <span>[اسمك الثلاثي هنا]</span>
+                </div>
+                <div class="profile-item">
+                    <p>الرقم الجامعي</p>
+                    <span>[الرقم الجامعي هنا]</span>
+                </div>
+                <div class="profile-item">
+                    <p>المادة</p>
+                    <span>تطبيقات الإنترنت والمنصات الإلكترونية</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- قسم المقدمة (section & p) -->
+        <section>
+            <h2>1. المقدمة</h2>
+            <p>تُعد لغة <strong>HTML5</strong> البنية الأساسية التي تُبنى عليها جميع صفحات ومواقع الويب على شبكة الإنترنت العالمية. يهدف هذا التقرير إلى استعراض المفاهيم الهيكلية الرئيسية لصفحات الويب وكيفية تحويل النصوص البحثية والمعلومات النظرية إلى تصميم رقمي تفاعلي يستطيع المتصفح قراءته وعرضه للمستخدمين بأعلى كفاءة ممكنة.</p>
+        </section>
+
+        <!-- قسم عرض الموضوع (h2, h3, table, img) -->
+        <section>
+            <h2>2. عرض الموضوع</h2>
+            <p>يتطلب بناء الهيكل البرمجي الصحيح اعتماد العناصر القياسية للغة، مع مراعاة تنظيم المحتوى واستخدام الوسوم المناسبة لكل جزء من أجزاء الصفحة، حيث تساهم البنية السليمة في تحسين <strong>تجربة المستخدم (UX)</strong> وأداء الويب بشكل عام.</p>
+
+            <h3>جدول مقارنة بين الوسوم الهيكلية الرئيسية (HTML Tags)</h3>
+            <p>يوضح الجدول التوضيحي التالي المقارنة بين أهم الوسوم المستخدمة في تنظيم هيكل الويب:</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الوسم (Tag)</th>
+                            <th>الوظيفة الأساسية</th>
+                            <th>نطاق الاستخدام القياسي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;header&gt;</code></td>
+                            <td>إنشاء ترويسة الصفحة أو القسم</td>
+                            <td>تحتوي على العنوان الرئيسي والبيانات التعريفية</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;section&gt;</code></td>
+                            <td>تحديد قسم مستقل وموضوعي</td>
+                            <td>تنسيق وتجميع الفقرات ذات الصلة بموضوع معين</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;table&gt;</code></td>
+                            <td>عرض البيانات والجداول المنظمة</td>
+                            <td>تنظيم البيانات وتسهيل المقارنة بين العناصر</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>العنصر البصري للتقرير</h3>
+            <div class="image-frame">
+                <!-- وسم الصورة img مع المكونات المطلوبة: src و alt -->
+                <img src="image.jpg" alt="صورة توضيحية لآلية بناء وتشغيل صفحات الويب باستخدام HTML5">
+                <p class="image-caption"><strong>شكل (1):</strong> هيكلية الترابط بين الأكواد البرمجية وواجهات المستخدم على شبكة الإنترنت.</p>
+            </div>
+            <p>تساعد الإيضاحات البصرية على رفع القيمة التعليمية للتقرير وتوضيح الفكرة للمطلعين بدقة عالية.</p>
+        </section>
+
+        <!-- قسم المراجع (ul, li, a) -->
+        <section>
+            <h2>3. المراجع</h2>
+            <p>قائمة المراجع والمصادر التوثيقية المعتمدة في إعداد هذا التقرير البحثي:</p>
+            <ul>
+                <li>دليل المطورين الأساسي لبناء وتطوير واجهات الويب، 2025.</li>
+                <li>توثيق المعايير البرمجية الصادر عن منظمة W3C العالمية.</li>
+                <li>المصدر الإلكتروني التعليمي المباشر عبر الرابط: <a href="https://developer.mozilla.org" target="_blank">موسوعة W3Schools وMDN المعتمدة</a>.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
